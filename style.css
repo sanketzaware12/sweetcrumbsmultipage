@@ -332,3 +332,21 @@ body.mo .mp{pointer-events:auto}
 .pc i{display:block;width:120px;height:2px;margin-top:6px;background:#ffffff1f;border-radius:2px;overflow:hidden;position:relative}
 .pc i:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--gold),#f3dfa2);transform:scaleX(0);transform-origin:left;animation:pb 1.3s cubic-bezier(.6,0,.2,1) forwards}
 @keyframes dr{to{stroke-dashoffset:0}}@keyframes pi{from{opacity:0;transform:scale(.4) rotate(-40deg)}}@keyframes pt{from{opacity:0;transform:translateY(16px);letter-spacing:.2em}}@keyframes pb{to{transform:none}}@keyframes pg2{to{transform:scale(1.15);opacity:.6}}
+
+/* Menu cards: WhatsApp button pinned to same line across all cards */
+.mg{align-items:stretch}
+.mi{display:flex;flex-direction:column}
+.mi div.t{flex:1;display:flex;flex-direction:column}
+.mi .en{margin-top:auto;align-self:flex-start}
+.mi div.t p{margin-bottom:14px}
+
+/* Home CTA ("Fresh today") block: even spacing, aligned content & equal buttons */
+.cb{align-items:center;padding:44px 52px}
+.cb>div:first-child{position:relative;z-index:2}
+.cb .tag{display:block;color:#E3C06E;margin:0 0 6px}
+.cb h2{margin:0 0 10px}
+.cb p{margin:0}
+.cb .bs{display:grid;grid-template-columns:1fr;gap:14px;justify-self:end;width:100%;max-width:260px;margin:0}
+.cb .bs .btn{display:flex;align-items:center;justify-content:center;width:100%;margin:0;text-align:center}
+@media(max-width:900px){.cb{padding:32px 24px}.cb .bs{justify-self:start;max-width:none;grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.cb .bs{grid-template-columns:1fr}}
